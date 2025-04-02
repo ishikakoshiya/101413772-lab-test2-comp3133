@@ -23,8 +23,8 @@ export class MissionlistComponent implements OnInit {
   ngOnInit(): void {
     this.spaceXService.getAllLaunches().subscribe(
       (data) => {
-        this.missions = data; // ✅ Store API data
-        console.log('Missions:', this.missions); // ✅ Debug log
+        this.missions = data; 
+        console.log('Missions:', this.missions); 
       },
       (error) => console.error('Error fetching missions:', error)
     );

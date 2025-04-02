@@ -10,11 +10,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
-
-// Import standalone components
 import { MissionlistComponent } from './components/missionlist/missionlist.component';
 import { MissiondetailsComponent } from './components/missiondetails/missiondetails.component';
 import { MissionFilterComponent }  from './components/missionfilter/missionfilter.component';
+
 bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(),

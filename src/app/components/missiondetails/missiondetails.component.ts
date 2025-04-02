@@ -17,14 +17,14 @@ export class MissiondetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private spaceXService: SpaceXService, private location: Location) {}
   goBack() {
-    this.location.back(); // Navigates back to the previous page
+    this.location.back(); 
   }
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       this.spaceXService.getLaunchDetails(+id).subscribe(
         (data) => {
-          this.mission = data; // ✅ Store mission details
+          this.mission = data; 
           console.log('Mission Details:', this.mission);
         },
         (error) => console.error('Error fetching mission details:', error)

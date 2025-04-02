@@ -1,0 +1,89 @@
+/* Container takes full width */
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  /* Flexbox for arranging the cards in full width */
+  .row {
+    display: flex;
+    flex-direction: column;
+   
+    width: 100%;
+    gap: 15px; /* Space between cards */
+  }
+  
+  /* Each mission card should take the FULL width */
+  .card {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Full width of the parent */
+    background: #b0e0e6; /* Light blue background */
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  /* If using Bootstrap, ensure this */
+  .col-md-4 {
+    flex: 1; /* Allow card to expand fully */
+    max-width: 100%;
+  }
+  
+  /* Image styling */
+  .card-img-top {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    background-color: white;
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 5px;
+  }
+  
+  /* Card body */
+  .card-body {
+    flex: 1; /* Take up remaining space */
+  }
+  
+  /* Mission title */
+  .card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+  }
+  
+  /* Launch year */
+  .card-text {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Mission details */
+  .card-body p {
+    font-size: 14px;
+    color: black;
+  }
+  
+  /* Button */
+  .btn-primary {
+    background: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  .btn-primary:hover {
+    background: darkgray;
+  }
+  

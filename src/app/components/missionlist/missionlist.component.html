@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>SPACE-X MISSIONS</h1>
+  <app-missionfilter (filterChanged)="filterMissions($event)"></app-missionfilter>
+  <br>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let mission of filteredMissions">
+      <div class="card">
+        <img [src]="mission.links.mission_patch_small || 'https://via.placeholder.com/100'" class="card-img-top" alt="Mission Patch">
+        <div class="card-body">
+          <h5 class="card-title">{{ mission.mission_name }}</h5>
+          <p class="card-text">Launch Year: {{ mission.launch_year }}</p>
+          <p class="card-text">{{ mission.details || 'No details available' }}</p>
+          <button (click)="viewDetails(mission.flight_number)" class="btn btn-primary">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
